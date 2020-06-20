@@ -1,0 +1,19 @@
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_CFLAGS:= -Wall -O2
+LOCAL_SRC_FILES:= cJSON.c
+#LOCAL_STATIC_LIBRARIES:=liblog
+LOCAL_SHARED_LIBRARIES := liblog
+LOCAL_MODULE:= libcjson
+include $(BUILD_SHARED_LIBRARY)
+
+#include $(CLEAR_VARS)
+#LOCAL_CFLAGS:= -Wall -O2
+#LOCAL_SRC_FILES:= test.c
+#LOCAL_MODULE:= testso
+#LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+#LOCAL_SHARED_LIBRARIES := liblog libcutils libselinux libcjson
+#include $(BUILD_EXECUTABLE)
+
+

@@ -1,0 +1,17 @@
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_CFLAGS:= -Wall -O2
+LOCAL_SRC_FILES:= rdumpsvc.c
+LOCAL_MODULE:= rdumpsvc
+LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+LOCAL_SHARED_LIBRARIES := libcutils libselinux
+include $(BUILD_EXECUTABLE)
+
+include $(CLEAR_VARS)
+LOCAL_CFLAGS:= -Wall -O2
+LOCAL_SRC_FILES:= rdumpextract.c
+LOCAL_MODULE:= rdumpextra
+LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+LOCAL_SHARED_LIBRARIES := libcutils libselinux
+include $(BUILD_EXECUTABLE)
